@@ -45,7 +45,9 @@ function App() {
     params.set("totalChunks", Math.ceil(file.size / chunkSize).toString());
 
     const headers = { "Content-Type": "application/octet-stream" };
-    const url = `${process.env.REACT_APP_BE_URL}/upload?${params.toString()}`;
+    const url = `${
+      process.env.REACT_APP_BE_URL
+    }/api/v1/upload/game?${params.toString()}`;
 
     console.log(url);
 
@@ -97,7 +99,7 @@ function App() {
 
   return (
     <div>
-      <p>{process.env.REACT_APP_BE_URL}</p>
+      <p>Backend URL: {process.env.REACT_APP_BE_URL}</p>
       <div
         onDragOver={(e) => {
           setDropzoneActive(true);
