@@ -47,7 +47,7 @@ function App() {
     const headers = { "Content-Type": "application/octet-stream" };
     const url = `${
       process.env.REACT_APP_BE_URL
-    }/api/v1/upload/game?${params.toString()}`;
+    }/api/v1/upload/game/chunks?${params.toString()}`;
 
     console.log(url);
 
