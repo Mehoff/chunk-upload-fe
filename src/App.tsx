@@ -49,8 +49,6 @@ function App() {
       process.env.REACT_APP_BE_URL
     }/api/v1/upload/game/chunks?${params.toString()}`;
 
-    console.log(url);
-
     axios.post(url, data, { headers }).then((response) => {
       const file = files[currentFileIndex!];
       const filesize = files[currentFileIndex!].size;
